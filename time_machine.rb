@@ -24,11 +24,11 @@ Dir.chdir(opts[:dir]) do
     # Get hashes of all the commits
     hashes = %x(git log --format=format:%H).split(/\n/).reverse;
 
-    hashes.each { |hash|
+    hashes.each_with_index { |hash, index|
         system "git branch time-machine #{hash}"
         system "git checkout time-machine"
 
-        result = system "phantomjs #{inital_dir}/picture.js #{file} #{opts[:save_dir]}#{hash}.png"
+        result = system "phantomjs #{inital_dir}/picture.js #{file} #{opts[:save_dir]}#{index}.png"
 
         system "git checkout #{inital_branch}"
         system "git branch -d time-machine"

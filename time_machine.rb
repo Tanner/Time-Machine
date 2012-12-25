@@ -22,7 +22,7 @@ Dir.chdir(opts[:dir]) do
     inital_branch = %x(git rev-parse --abbrev-ref HEAD).strip
 
     # Get hashes of all the commits
-    hashes = %x(git log --format=format:%H).split(/\n/);
+    hashes = %x(git log --format=format:%H).split(/\n/).reverse;
 
     hashes.each { |hash|
         system "git branch time-machine #{hash}"

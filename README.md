@@ -8,18 +8,20 @@ Arguments
 ---------
 All of the arguments are required.
 
-`› ruby time_machine.rb --help
+```
+$ ruby time_machine.rb --help
 Options:
        --dir, -d <s>:   Git Directory
       --file, -f <s>:   File
   --save-dir, -s <s>:   Directory where to save images
-          --help, -h:   Show this message`
+          --help, -h:   Show this message
+```
 
 Example Execution
 -----------------
 If the project git directory is at `~/Development/Kitty` and the file you're interested in is `index.html` (in the root dir of the project directory), then the command will be:
 
-`ruby time_machine.rb --dir ~/Development/Kitty --file index.html --save-dir ~/Desktop/Pictures/
+`ruby time_machine.rb --dir ~/Development/Kitty --file index.html --save-dir ~/Desktop/Pictures/`
 
 Pictures will be saved at `~/Desktop/Pictures/`.
 

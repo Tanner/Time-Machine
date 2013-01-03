@@ -33,4 +33,4 @@ Time Machine does not yet support making a video, but to do so just use ffmpeg t
 
 Examples
 --------
-* [CS 2050 Project - Video](http://www.youtube.com/watch?v=8XBaz0RBSEk)
+* [CS 2050 Project - Video](http://www.youtube.com/watch?v=BoCCXVjXRAI)
